@@ -12,26 +12,29 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="https://riajultech.com/favicon.ico">
     
-    <!-- Google Fonts & FontAwesome -->
+    <!-- Google Fonts & Updated FontAwesome (Fixed X/Twitter Icon) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Dynamic Header -->
+    <!-- Dynamic Animated Background Gradients -->
+    <div class="gradient-bg-animation"></div>
+
+    <!-- Premium Navbar -->
     <header class="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">Riajul<span>.Marketing</span></a>
+            <a href="#home" class="nav-logo">Riajul<span class="pulse-dot">.Marketing</span></a>
             <nav class="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#services" class="nav-link">Expertise</a>
                 <a href="#work" class="nav-link">Case Studies</a>
                 <a href="#reviews" class="nav-link">Affiliate Reviews</a>
-                <a href="#contact" class="nav-btn">Get Free Audit</a>
+                <a href="#contact" class="nav-btn-glow">Get Free Audit <i class="fas fa-sparkles"></i></a>
             </nav>
         </div>
     </header>
@@ -39,29 +42,29 @@
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="hero-container">
-            <div class="hero-text-block">
-                <span class="hero-badge"><i class="fas fa-bolt"></i> Available for Remote Projects</span>
-                <h1 class="hero-title">Performance Marketing Specialist | Meta Ads | Google Ads | SEO</h1>
+            <div class="hero-text-block fade-in-up">
+                <span class="hero-badge"><span class="live-indicator"></span> Available for Remote Projects</span>
+                <h1 class="hero-title">Performance Marketing Specialist <br><span class="highlight-text">Meta Ads | Google Ads | SEO</span></h1>
                 <p class="hero-subtitle">I build high-converting paid ad pipelines and scale organic search authority to maximize your brand's digital ROI.</p>
                 
                 <div class="hero-cta-group">
-                    <a href="#contact" class="cta-primary">Launch Project <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="cta-primary-glow">Launch Project <i class="fas fa-arrow-right"></i></a>
                     <div class="hero-socials">
-                        <a href="https://www.linkedin.com/in/khandokarriajulislam/" target="_blank" rel="noopener" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.facebook.com/khandokarriajulislambappy/" target="_blank" rel="noopener" class="social-circle"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://x.com/RiajulKhandoker" target="_blank" rel="noopener" class="social-circle"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://wa.me/8801707302038" target="_blank" rel="noopener" class="social-circle"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/in/khandokarriajulislam/" target="_blank" rel="noopener" class="social-circle" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/khandokarriajulislambappy/" target="_blank" rel="noopener" class="social-circle" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/RiajulKhandoker" target="_blank" rel="noopener" class="social-circle" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://wa.me/8801707302038" target="_blank" rel="noopener" class="social-circle" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
                 <div class="hero-quick-contact">
-                    <span><i class="fas fa-phone-alt"></i> +8801954447017</span>
+                    <span><i class="fas fa-phone-alt animate-bounce"></i> +8801954447017</span>
                     <span><i class="fas fa-envelope"></i> khandokarriajulislam@gmail.com</span>
                     <span><i class="fas fa-globe"></i> <a href="https://riajultech.com/" target="_blank" rel="noopener">riajultech.com</a></span>
                 </div>
             </div>
 
-            <div class="hero-visual-block">
+            <div class="hero-visual-block fade-in-right">
                 <div class="profile-card-glow">
                     <div class="image-wrapper">
                         <img src="riajul-profile.jpeg" alt="Khandokar Riajul Islam" onerror="this.style.display='none'; this.parentNode.querySelector('.img-fallback').style.display='flex';">
@@ -86,23 +89,26 @@
     <!-- Services / Core Skillsets -->
     <section id="services" class="section-padding">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header text-center">
                 <span class="sub-title">What I Do Best</span>
                 <h2>Data-Driven Acquisition Channels</h2>
             </div>
             
             <div class="dynamic-grid">
                 <div class="interactive-card">
+                    <div class="card-glow-effect"></div>
                     <div class="card-icon-box"><i class="fab fa-facebook"></i></div>
                     <h3>Meta Ads Scaling</h3>
                     <p>Advanced pixel configurations, lookalike distribution, and custom conversions optimized for ultra-low acquisition costs.</p>
                 </div>
                 <div class="interactive-card">
+                    <div class="card-glow-effect"></div>
                     <div class="card-icon-box"><i class="fab fa-google"></i></div>
                     <h3>Google Ads Management</h3>
                     <p>High-intent Search campaigns, Performance Max (PMax) infrastructure setups, and precise keyword match type handling.</p>
                 </div>
                 <div class="interactive-card">
+                    <div class="card-glow-effect"></div>
                     <div class="card-icon-box"><i class="fas fa-chart-pie"></i></div>
                     <h3>Search Engine Optimization</h3>
                     <p>Semantic indexing, content mapping, and advanced programmatic workflows tailored to compete in US/Global markets.</p>
@@ -124,7 +130,7 @@
                     <div class="portfolio-img-box">
                         <img src="meta-ads.jpeg" alt="Meta Campaign Analytics">
                         <div class="portfolio-hover-overlay">
-                            <span>View Insights <i class="fas fa-external-link-alt"></i></span>
+                            <span>View Insights <i class="fas fa-arrow-up-right-from-square"></i></span>
                         </div>
                     </div>
                     <div class="portfolio-meta">
@@ -137,7 +143,7 @@
                     <div class="portfolio-img-box">
                         <img src="gsc-seo.jpeg" alt="Google Search Console Data">
                         <div class="portfolio-hover-overlay">
-                            <span>View Insights <i class="fas fa-external-link-alt"></i></span>
+                            <span>View Insights <i class="fas fa-arrow-up-right-from-square"></i></span>
                         </div>
                     </div>
                     <div class="portfolio-meta">
@@ -152,7 +158,7 @@
     <!-- Affiliate Reviews Section -->
     <section id="reviews" class="section-padding">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header text-center">
                 <span class="sub-title">Asset Showcase</span>
                 <h2>Affiliate Network Operations</h2>
             </div>
@@ -160,7 +166,7 @@
             <div class="review-dynamic-container">
                 <div class="review-glass-row">
                     <div class="row-brand">
-                        <span class="brand-badge">RiajulTech.com</span>
+                        <span class="brand-badge-glow">RiajulTech.com</span>
                     </div>
                     <div class="row-content">
                         <h4>Organic Tech Asset Strategy</h4>
@@ -173,7 +179,7 @@
 
                 <div class="review-glass-row">
                     <div class="row-brand">
-                        <span class="brand-badge">Amazon & Impact</span>
+                        <span class="brand-badge-glow">Amazon & Impact</span>
                     </div>
                     <div class="row-content">
                         <h4>Conversion Rate Optimization (CRO)</h4>
@@ -214,7 +220,7 @@
 
     <!-- Footer -->
     <footer class="clean-footer">
-        <p>&copy; 2026 Khandokar Riajul Islam. Built for Scale.</p>
+        <p>&copy; 2026 Khandokar Riajul Islam. Built for Scale & Conversions.</p>
     </footer>
 
 </body>
