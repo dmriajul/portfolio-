@@ -1,0 +1,193 @@
+/* Design System: Emerald Prestige */
+:root {
+    --emerald-deep: #064e3b;
+    --emerald-light: #0d7a5f;
+    --gold: #c9a84c;
+    --off-white: #f5f0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--off-white);
+    color: var(--emerald-deep);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--emerald-deep);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    border-b: 1px solid var(--emerald-light);
+    padding: 15px 30px;
+}
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: bold;
+}
+.nav-links a {
+    color: var(--off-white);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* Hero */
+.hero {
+    max-width: 1100px;
+    margin: 100px auto 5px auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+.hero-content h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.hero-content p {
+    color: var(--emerald-light);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.hero-metrics {
+    width: 300px;
+}
+.metric-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--gold);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Services */
+.services {
+    background-color: var(--emerald-deep);
+    color: var(--off-white);
+    padding: 60px 20px;
+    text-align: center;
+}
+.services h2 {
+    color: var(--gold);
+    margin-bottom: 40px;
+}
+.services-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.service-card {
+    background: var(--emerald-light);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Case Studies */
+.work {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+.work h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.work-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+}
+.badge {
+    background: var(--off-white);
+    border: 1px solid var(--gold);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.work-card h3 { margin: 15px 0 10px 0; }
+.result {
+    margin-top: 15px;
+    background: var(--off-white);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Contact & Buttons */
+.contact {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+}
+.btn-lg, .btn-sm {
+    background: var(--emerald-deep);
+    color: var(--off-white);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-sm {
+    background: var(--gold);
+    color: var(--emerald-deep);
+    padding: 8px 15px;
+}
+footer {
+    background: var(--emerald-deep);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    opacity: 0.7;
+}
