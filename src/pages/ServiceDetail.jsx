@@ -53,7 +53,7 @@ export default function ServiceDetail() {
   if (!service) return <NotFound />
 
   return (
-    <article>
+    <article className="service-page">
       {/* ---------------- Sub-nav: breadcrumb + service switcher ---------------- */}
       <div className="sd-subnav">
         <div className="container sd-subnav-inner">

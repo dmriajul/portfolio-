@@ -2,6 +2,12 @@
    Service detail pages — /services/:slug
    ========================================================================== */
 
+/* ---------- Page shell ---------- */
+/* Clears the fixed navbar so the breadcrumb row is never hidden behind it. */
+.service-page {
+  padding-top: var(--nav-h);
+}
+
 /* ---------- Sub-nav: breadcrumb + service switcher ---------- */
 .sd-subnav {
   position: sticky;
@@ -661,7 +667,7 @@
     grid-template-columns: 1fr;
   }
   .sd-subnav {
-    top: 64px;
+    top: var(--nav-h);
   }
 }
 
