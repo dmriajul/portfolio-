@@ -1,1 +1,159 @@
-# portfolio-
+# Khandokar Riajul Islam — Portfolio
+
+React + Vite portfolio with **dedicated service detail pages**.
+
+The portfolio URL stays the same (`/`); each service now has its own shareable page
+you can send with a job application or a client proposal.
+
+```
+/                                     full portfolio
+/services/social-media-marketing      ← Social Media Manager applications
+/services/meta-ads
+/services/google-ads
+/services/seo
+/services/analytics
+/services/cro
+```
+
+Short aliases also work and redirect to the canonical page, so old links never 404:
+`/services/smm`, `/services/facebook-ads`, `/services/ppc`,
+`/services/search-engine-optimization`, `/services/ga4`,
+`/services/conversion-rate-optimization`.
+
+---
+
+## Quick start
+
+```bash
+npm install
+npm run dev        # local dev server (http://localhost:5173)
+npm run build      # production build → dist/
+npm run preview    # preview the production build
+npm run smoke      # render every route + assert all content is present
+```
+
+## Stack
+
+| Concern    | Choice                                             |
+| ---------- | -------------------------------------------------- |
+| Framework  | React 18 + Vite 5                                  |
+| Routing    | react-router-dom v6 (`/services/:slug`)            |
+| Animation  | framer-motion                                      |
+| Icons      | react-icons                                        |
+| Styling    | Hand-written CSS (no framework), dark emerald + gold |
+| Hosting    | Vercel (SPA rewrite configured in `vercel.json`)   |
+
+## Visual direction
+
+Dark green / emerald background · gold accent · white typography · premium professional look ·
+fully responsive · Framer Motion reveals · reduced-motion support.
+
+All colours live in `src/styles/global.css` under `:root` — change them once and the whole site
+(including every service page) follows.
+
+## Page flow
+
+`Navbar → Hero → About → Skills → Certifications → Projects → Services → Experience → Testimonials → Contact → Footer`
+
+## Project structure
+
+```
+index.html                     Vite entry (SEO meta, fonts)
+vercel.json                    SPA rewrite → fixes /services/... 404 on Vercel
+public/
+  favicon.svg
+  resume/README.md             ← put your PDF here
+src/
+  data/                        ALL CONTENT LIVES HERE
+    site.js                    name, email, phone, WhatsApp, socials, booking URL, resume path
+    services.js                the 6 services: capabilities, process, deliverables, tools, FAQs
+    projects.js                7 case studies with real campaign metrics
+    skills.js                  skill groups + About badges
+    experience.js              work history + About stats
+    certifications.js          credentials
+    testimonials.js            client feedback
+  styles/
+    global.css                 tokens, reset, typography, buttons, utilities
+    layout.css                 navbar, mobile menu, footer, 404
+    home.css                   hero → contact sections
+    service.css                service detail pages
+  components/                  Navbar, Footer, Layout, Reveal, Avatar, Faq,
+                               ServiceCard, ProjectCard, ContactButtons, …
+  sections/                    Hero, About, Skills, Certifications, Projects,
+                               Services, Experience, Testimonials, Contact, Strip
+  pages/                       Home, ServiceDetail, NotFound
+  hooks/useSeo.js              per-page <title>, description, canonical, OG tags
+smoke/ssr-entry.jsx            route + content smoke test
+legacy-static/                 the previous single-file HTML site (kept for reference)
+```
+
+## Editing content
+
+**Everything is data-driven** — you never need to touch JSX to change copy.
+
+| I want to change…                        | Edit                                  |
+| ---------------------------------------- | ------------------------------------- |
+| Email / phone / WhatsApp / socials       | `src/data/site.js`                    |
+| The "Book a Call" destination            | `bookingUrl` in `src/data/site.js`    |
+| Resume file                              | `public/resume/` + `resumeUrl`        |
+| Contact form                             | `web3formsKey` in `src/data/site.js`  |
+| A service's capabilities / process / FAQ | `src/data/services.js`                |
+| Case study numbers                       | `src/data/projects.js`                |
+| Certifications, experience, testimonials | matching file in `src/data/`          |
+
+### Adding a new service
+
+Add one object to the `services` array in `src/data/services.js` with a unique `slug`.
+The home-page card, the detail route, the service switcher, the footer list, the 404 page
+and the mobile menu all pick it up automatically. Tag relevant case studies in
+`projects.js` (`services: ['your-slug']`) and they appear on the new page under "Relevant Work".
+
+## Service page anatomy
+
+Each `/services/:slug` page contains:
+
+1. **Sub-nav** — breadcrumb + horizontal switcher between all six services
+2. **Hero** — icon, title, tagline, real result highlights, Book a Call / WhatsApp / Email
+3. **Overview** — three-paragraph positioning statement
+4. **Capabilities** — grouped checklist (Social Media Marketing lists all 26 across 7 groups)
+5. **Process** — 6 numbered steps
+6. **Deliverables & tools** — what you receive + the stack used + engagement models
+7. **Relevant work** — case studies filtered to that service, with real metrics
+8. **FAQ** — animated accordion
+9. **CTA panel** — Book a Call · WhatsApp · Email
+10. **Other services** — cross-links
+
+## Deployment notes
+
+### Vercel
+
+`vercel.json` already contains the SPA rewrite, which is what fixes the
+`/services/social-media-marketing → 404` problem on a client-side routed app:
+
+```json
+{ "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }] }
+```
+
+### Other hosts
+
+Any static host works — just point it at `dist/` and add a "rewrite all routes to
+`index.html`" rule (Netlify: a `public/_redirects` file with `/* /index.html 200`).
+
+---
+
+## ⚠️ Before publishing — please confirm these
+
+Placeholder content that must be replaced with your real details:
+
+| Item | File | Status |
+| --- | --- | --- |
+| Certifications | `src/data/certifications.js` | **Draft** — 4 placeholder credentials, replace with real ones |
+| Testimonials | `src/data/testimonials.js` | **Draft quotes** — the `result` metrics are real, the quotes/names are not |
+| Experience periods | `src/data/experience.js` | Roles reconstructed from client work — **check the dates/titles** |
+| Booking link | `src/data/site.js` → `bookingUrl` | Empty → "Book a Call" currently falls back to WhatsApp |
+| Resume PDF | `public/resume/` | Missing → button shows an email fallback instead of 404 |
+| Web3Forms key | `src/data/site.js` → `web3formsKey` | Placeholder → form shows a notice and points to email/WhatsApp |
+| Profile photo | `public/profile.jpg` | Missing → initials card is rendered instead |
+
+Everything else (case-study numbers, services, capabilities, contact details) uses the
+confirmed data you provided.
