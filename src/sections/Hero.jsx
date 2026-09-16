@@ -9,12 +9,16 @@ import {
   FaEnvelope,
   FaGlobe,
   FaMapMarkerAlt,
+  FaWhatsapp,
 } from 'react-icons/fa'
+import { FaLinkedinIn, FaFacebookF, FaXTwitter } from 'react-icons/fa6'
 import Avatar from '../components/Avatar.jsx'
 import Reveal from '../components/Reveal.jsx'
 import CountUp from '../components/CountUp.jsx'
 import RotatingText from '../components/RotatingText.jsx'
-import site, { bookingLink, mailtoLink } from '../data/site.js'
+import site, { bookingLink, mailtoLink, whatsappLink } from '../data/site.js'
+
+const socialIcons = { linkedin: FaLinkedinIn, facebook: FaFacebookF, x: FaXTwitter, website: FaGlobe }
 
 const ROTATING_ROLES = [
   'Performance Marketing Specialist',
@@ -122,6 +126,41 @@ export default function Hero() {
                 <FaDownload />
                 {resumeState === 'checking' ? 'Checking…' : 'Download Resume'}
               </button>
+            </motion.div>
+
+            <motion.div
+              className="hero-socials"
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.24 }}
+              aria-label="Social media profiles"
+            >
+              {site.socials.map((soc) => {
+                const Icon = socialIcons[soc.id] || FaGlobe
+                return (
+                  <a
+                    key={soc.id}
+                    className="social-circle"
+                    href={soc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={soc.label}
+                    title={soc.label}
+                  >
+                    <Icon />
+                  </a>
+                )
+              })}
+              <a
+                className="social-circle"
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                title="WhatsApp"
+              >
+                <FaWhatsapp />
+              </a>
             </motion.div>
 
             {resumeState === 'missing' && (

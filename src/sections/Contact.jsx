@@ -8,6 +8,7 @@ import {
   FaPaperPlane,
   FaCalendarCheck,
 } from 'react-icons/fa'
+import { FaLinkedinIn, FaFacebookF, FaXTwitter } from 'react-icons/fa6'
 import Reveal from '../components/Reveal.jsx'
 import site, { whatsappLink, mailtoLink, bookingLink } from '../data/site.js'
 
@@ -134,6 +135,25 @@ export default function Contact() {
               >
                 <FaCalendarCheck /> Book a Call
               </a>
+
+              <div className="hero-socials contact-socials" aria-label="Social media profiles">
+                {site.socials.map((soc) => {
+                  const Icon = { linkedin: FaLinkedinIn, facebook: FaFacebookF, x: FaXTwitter, website: FaGlobe }[soc.id] || FaGlobe
+                  return (
+                    <a
+                      key={soc.id}
+                      className="social-circle"
+                      href={soc.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={soc.label}
+                      title={soc.label}
+                    >
+                      <Icon />
+                    </a>
+                  )
+                })}
+              </div>
             </div>
           </Reveal>
 
