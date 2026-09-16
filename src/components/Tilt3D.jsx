@@ -8,7 +8,7 @@ import { useRef, useCallback } from 'react'
 export default function Tilt3D({
   children,
   className = '',
-  max = 9,
+  max = 6,
   glare = true,
   scale = 1.015,
   ...rest

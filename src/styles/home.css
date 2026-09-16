@@ -1175,7 +1175,7 @@ a.contact-card:hover {
   height: 460px;
   top: -120px;
   left: -140px;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.34), transparent 66%);
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.2), transparent 66%);
   animation: float-a 17s ease-in-out infinite alternate;
 }
 
@@ -1184,7 +1184,7 @@ a.contact-card:hover {
   height: 380px;
   top: 32%;
   right: -160px;
-  background: radial-gradient(circle, rgba(245, 196, 81, 0.2), transparent 66%);
+  background: radial-gradient(circle, rgba(245, 196, 81, 0.11), transparent 66%);
   animation: float-b 21s ease-in-out infinite alternate;
 }
 
@@ -1193,7 +1193,7 @@ a.contact-card:hover {
   height: 300px;
   bottom: -120px;
   left: 38%;
-  background: radial-gradient(circle, rgba(52, 211, 153, 0.22), transparent 66%);
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.13), transparent 66%);
   animation: float-a 25s ease-in-out infinite alternate-reverse;
 }
 

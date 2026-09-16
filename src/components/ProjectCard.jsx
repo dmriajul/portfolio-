@@ -5,7 +5,7 @@ import Tilt3D from './Tilt3D.jsx'
 /** Case-study card built on real campaign numbers. */
 export default function ProjectCard({ project, index = 0, showApproach = true }) {
   return (
-    <Reveal delay={index * 0.07} y={30} rx={7}>
+    <Reveal delay={index * 0.07} y={26}>
       <Tilt3D>
       <article className="project-card">
         {project.image && (

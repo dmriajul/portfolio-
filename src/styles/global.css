@@ -8,7 +8,7 @@
   --bg-deep: #030d09;
   --bg-base: #05170f;
   --bg-raise: #07231a;
-  --bg-card: rgba(255, 255, 255, 0.028);
+  --bg-card: rgba(255, 255, 255, 0.05);
   --bg-card-hover: rgba(52, 211, 153, 0.06);
 
   /* Brand */
@@ -22,11 +22,11 @@
   /* Text */
   --text: #f2fbf6;
   --text-soft: #d5e8dd;
-  --muted: #a3bfb1;
-  --muted-dim: #7f9c8d;
+  --muted: #b7d3c5;
+  --muted-dim: #90ae9f;
 
   /* Lines & effects */
-  --border: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.1);
   --border-emerald: rgba(52, 211, 153, 0.28);
   --border-gold: rgba(245, 196, 81, 0.32);
   --shadow-card: 0 18px 45px rgba(0, 0, 0, 0.45);

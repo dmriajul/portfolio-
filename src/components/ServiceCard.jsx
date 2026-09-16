@@ -13,7 +13,7 @@ export default function ServiceCard({ service, index = 0, previewItems = 4 }) {
   const preview = allItems.slice(0, previewItems)
 
   return (
-    <Reveal delay={index * 0.06} y={28} rx={7}>
+    <Reveal delay={index * 0.06} y={24}>
       <Tilt3D>
       <article className={`service-card${service.accent === 'gold' ? ' gold' : ''}`}>
         <div className="service-icon" aria-hidden="true">

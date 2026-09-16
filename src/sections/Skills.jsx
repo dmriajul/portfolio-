@@ -20,7 +20,7 @@ export default function Skills() {
           {skillGroups.map((group, i) => {
             const Icon = group.icon
             return (
-              <Reveal key={group.title} delay={i * 0.06} y={26} rx={8}>
+              <Reveal key={group.title} delay={i * 0.06} y={24}>
                 <Tilt3D>
                 <article className="skill-card">
                   <div className="skill-card-head">
