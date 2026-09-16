@@ -1,5 +1,6 @@
 import { FaCircleCheck } from 'react-icons/fa6'
 import Reveal from '../components/Reveal.jsx'
+import Tilt3D from '../components/Tilt3D.jsx'
 import { skillGroups } from '../data/skills.js'
 
 export default function Skills() {
@@ -19,7 +20,8 @@ export default function Skills() {
           {skillGroups.map((group, i) => {
             const Icon = group.icon
             return (
-              <Reveal key={group.title} delay={i * 0.06} y={26}>
+              <Reveal key={group.title} delay={i * 0.06} y={26} rx={8}>
+                <Tilt3D>
                 <article className="skill-card">
                   <div className="skill-card-head">
                     <span className="skill-icon" aria-hidden="true">
@@ -35,6 +37,7 @@ export default function Skills() {
                     ))}
                   </ul>
                 </article>
+                </Tilt3D>
               </Reveal>
             )
           })}

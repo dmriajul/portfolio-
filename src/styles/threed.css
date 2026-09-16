@@ -1,0 +1,243 @@
+/* ==========================================================================
+   3D / dynamic layer: WebGL backdrop, tilt cards, glare, 3D conveyors,
+   floating chips, depth shadows
+   ========================================================================== */
+
+/* ---------- WebGL hero backdrop ---------- */
+.hero3d {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero3d-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* content must sit above the canvas */
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Tilt cards ---------- */
+.tilt3d {
+  transform-style: preserve-3d;
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  position: relative;
+  border-radius: inherit;
+  height: 100%;
+}
+
+.tilt3d > * {
+  height: 100%;
+}
+
+/* moving glare highlight */
+.tilt-glare::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(
+    420px circle at var(--gx, 50%) var(--gy, 50%),
+    rgba(255, 255, 255, 0.13),
+    rgba(52, 211, 153, 0.07) 38%,
+    transparent 66%
+  );
+}
+
+.tilt3d:hover .tilt-glare::before,
+.tilt-glare:hover::before {
+  opacity: 1;
+}
+
+/* layered depth inside tilted cards */
+.tilt3d .tz {
+  transform: translateZ(30px);
+}
+
+.tilt3d .tz-sm {
+  transform: translateZ(16px);
+}
+
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  .tilt3d {
+    transform: none !important;
+  }
+  .tilt-glare::before {
+    display: none;
+  }
+}
+
+/* ---------- 3D conveyor belts (marquees) ---------- */
+.strip {
+  perspective: 760px;
+  perspective-origin: 50% 0%;
+}
+
+.strip-tilt {
+  transform: rotateX(16deg);
+  transform-style: preserve-3d;
+}
+
+.quote-marquee {
+  perspective: 1100px;
+  perspective-origin: 50% 40%;
+}
+
+.quote-tilt {
+  transform: rotateX(9deg);
+  transform-style: preserve-3d;
+}
+
+.quote-cell .quote-card {
+  box-shadow: 0 26px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Floating 3D chips around the avatar ---------- */
+.float-chip {
+  position: absolute;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--border-emerald);
+  background: rgba(4, 20, 14, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--emerald-300);
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+  animation: chip-float 6s ease-in-out infinite;
+  white-space: nowrap;
+}
+
+.float-chip svg {
+  font-size: 12px;
+}
+
+.float-chip.gold {
+  border-color: var(--border-gold);
+  color: var(--gold);
+  animation-delay: -3s;
+  animation-duration: 7s;
+}
+
+.float-chip.c1 { top: 9%; left: -9%; }
+.float-chip.c2 { top: 30%; right: -11%; }
+.float-chip.c3 { bottom: 24%; left: -13%; }
+
+@keyframes chip-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotateY(0deg); }
+  50% { transform: translate3d(0, -12px, 0) rotateY(14deg); }
+}
+
+@media (max-width: 640px) {
+  .float-chip.c1 { left: -4%; }
+  .float-chip.c2 { right: -4%; }
+  .float-chip.c3 { left: -4%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-chip { animation: none; }
+}
+
+/* ---------- Depth & glow polish ---------- */
+.service-card,
+.project-card,
+.skill-card,
+.cert-card,
+.edu-card,
+.quote-card,
+.exp-card,
+.cap-group,
+.hero-stat,
+.about-stat,
+.contact-card {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.055), 0 18px 40px rgba(0, 0, 0, 0.38);
+}
+
+.service-card:hover,
+.project-card:hover,
+.skill-card:hover,
+.cert-card:hover,
+.edu-card:hover {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(52, 211, 153, 0.16),
+    0 14px 44px rgba(16, 185, 129, 0.14);
+}
+
+/* glowing section separators */
+.section-alt {
+  position: relative;
+}
+
+.section-alt::before,
+.section-alt::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(560px, 70%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.5), rgba(245, 196, 81, 0.35), transparent);
+  filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.55));
+}
+
+.section-alt::before { top: -1px; }
+.section-alt::after { bottom: -1px; }
+
+/* ---------- 3D buttons ---------- */
+.btn {
+  transform-style: preserve-3d;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.28), 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+.btn-primary {
+  box-shadow: 0 5px 0 #065f46, 0 14px 34px rgba(16, 185, 129, 0.3);
+}
+
+.btn-gold {
+  box-shadow: 0 5px 0 #92600a, 0 14px 34px rgba(245, 196, 81, 0.26);
+}
+
+.btn-outline,
+.btn-ghost {
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35), 0 12px 26px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Layered hero headline ---------- */
+.hero-title .name-line {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55), 0 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title .line-2 .rotating-text {
+  filter: drop-shadow(0 6px 24px rgba(16, 185, 129, 0.35));
+}
+
+/* perspective wrapper for grids that hold tilted cards */
+.persp {
+  perspective: 1400px;
+}

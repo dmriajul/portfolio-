@@ -1,6 +1,6 @@
 import { FaCircleCheck, FaGraduationCap } from 'react-icons/fa6'
 import Reveal from '../components/Reveal.jsx'
-import Spotlight from '../components/Spotlight.jsx'
+import Tilt3D from '../components/Tilt3D.jsx'
 import { certProviders, education, certifications } from '../data/certifications.js'
 
 /**
@@ -26,7 +26,8 @@ export default function Certifications() {
         <div className="grid grid-3 cert-grid">
           {certProviders.map((p, i) => (
             <Reveal key={p.id} delay={i * 0.06} y={24}>
-              <Spotlight className="cert-card">
+              <Tilt3D className="cert-tilt">
+                <article className="cert-card">
                 <div className="cert-card-head">
                   <img className="cert-logo" src={p.logo} alt={`${p.name} logo`} loading="lazy" width="44" height="44" />
                   <div>
@@ -41,7 +42,8 @@ export default function Certifications() {
                     </li>
                   ))}
                 </ul>
-              </Spotlight>
+                </article>
+                </Tilt3D>
             </Reveal>
           ))}
         </div>
@@ -57,7 +59,8 @@ export default function Certifications() {
         <div className="grid grid-3">
           {education.map((e, i) => (
             <Reveal key={e.degree} delay={i * 0.07} y={22}>
-              <Spotlight className="edu-card">
+              <Tilt3D className="edu-tilt">
+                <article className="edu-card">
                 <span className="edu-icon" aria-hidden="true">
                   <FaGraduationCap />
                 </span>
@@ -68,7 +71,8 @@ export default function Certifications() {
                   {e.period && e.result && <span className="dot">·</span>}
                   {e.result && <span>{e.result}</span>}
                 </p>
-              </Spotlight>
+                </article>
+                </Tilt3D>
             </Reveal>
           ))}
         </div>

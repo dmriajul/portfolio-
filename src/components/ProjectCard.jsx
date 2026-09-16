@@ -1,10 +1,12 @@
 import { FaCircleCheck } from 'react-icons/fa6'
 import Reveal from './Reveal.jsx'
+import Tilt3D from './Tilt3D.jsx'
 
 /** Case-study card built on real campaign numbers. */
 export default function ProjectCard({ project, index = 0, showApproach = true }) {
   return (
-    <Reveal delay={index * 0.07} y={30}>
+    <Reveal delay={index * 0.07} y={30} rx={7}>
+      <Tilt3D>
       <article className="project-card">
         {project.image && (
           <div className="project-img">
@@ -47,6 +49,7 @@ export default function ProjectCard({ project, index = 0, showApproach = true })
           </div>
         )}
       </article>
+      </Tilt3D>
     </Reveal>
   )
 }

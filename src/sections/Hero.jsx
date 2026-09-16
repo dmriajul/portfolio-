@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import {
   FaCalendarCheck,
   FaArrowRight,
@@ -10,12 +10,17 @@ import {
   FaGlobe,
   FaMapMarkerAlt,
   FaWhatsapp,
+  FaChartLine,
+  FaBullseye,
+  FaComments,
 } from 'react-icons/fa'
 import { FaLinkedinIn, FaFacebookF, FaXTwitter } from 'react-icons/fa6'
 import Avatar from '../components/Avatar.jsx'
 import Reveal from '../components/Reveal.jsx'
 import CountUp from '../components/CountUp.jsx'
 import RotatingText from '../components/RotatingText.jsx'
+import Hero3D from '../components/Hero3D.jsx'
+import Tilt3D from '../components/Tilt3D.jsx'
 import site, { bookingLink, mailtoLink, whatsappLink } from '../data/site.js'
 
 const socialIcons = { linkedin: FaLinkedinIn, facebook: FaFacebookF, x: FaXTwitter, website: FaGlobe }
@@ -37,6 +42,12 @@ const heroStats = [
 
 export default function Hero() {
   const [resumeState, setResumeState] = useState('idle') // idle | checking | missing
+
+  /* scroll-linked 3D parallax */
+  const { scrollY } = useScroll()
+  const textY = useTransform(scrollY, [0, 700], [0, -60])
+  const visualY = useTransform(scrollY, [0, 700], [0, 70])
+  const visualRotate = useTransform(scrollY, [0, 700], [0, 7])
 
   /**
    * 404-safe resume download: HEAD-check the file first.
@@ -60,6 +71,9 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero">
+      {/* WebGL particle / wireframe backdrop */}
+      <Hero3D />
+
       {/* animated aurora orbs */}
       <div className="orb orb-1" aria-hidden="true" />
       <div className="orb orb-2" aria-hidden="true" />
@@ -68,7 +82,7 @@ export default function Hero() {
       <div className="container">
         <div className="hero-grid">
           {/* ---------------- Left ---------------- */}
-          <div>
+          <motion.div style={{ y: textY }}>
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
@@ -195,16 +209,29 @@ export default function Hero() {
                 <FaMapMarkerAlt /> {site.location}
               </span>
             </motion.div>
-          </div>
+          </motion.div>
 
           {/* ---------------- Right ---------------- */}
+          <motion.div className="hero-visual-wrap" style={{ y: visualY, rotateX: visualRotate }}>
           <Reveal className="hero-visual" x={34} y={0} delay={0.1}>
-            <div className="avatar-frame">
-              <Avatar initials="KR" />
-              <span className="avatar-badge">
-                <FaCalendarCheck /> {site.roleAlt}
-              </span>
-            </div>
+            <Tilt3D max={11} className="avatar-tilt">
+              <div className="avatar-frame">
+                <Avatar initials="KR" />
+                <span className="avatar-badge">
+                  <FaCalendarCheck /> {site.roleAlt}
+                </span>
+
+                <span className="float-chip c1 tz">
+                  <FaChartLine /> 174K impressions
+                </span>
+                <span className="float-chip gold c2 tz">
+                  <FaBullseye /> $0.027 / result
+                </span>
+                <span className="float-chip c3 tz">
+                  <FaComments /> 860+ conversations
+                </span>
+              </div>
+            </Tilt3D>
 
             <div className="hero-stat-grid">
               {heroStats.map((s) => (
@@ -222,6 +249,7 @@ export default function Hero() {
               ))}
             </div>
           </Reveal>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -24,12 +24,14 @@ export default function Strip() {
 
   return (
     <div className="strip" aria-hidden="true">
+      <div className="strip-tilt">
       <div className="strip-track">
         {doubled.map((item, i) => (
           <span className="strip-item" key={`${item}-${i}`}>
             <FaStar /> {item}
           </span>
         ))}
+      </div>
       </div>
     </div>
   )

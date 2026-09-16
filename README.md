@@ -43,10 +43,20 @@ npm run smoke      # render every route + assert all content is present
 | Styling    | Hand-written CSS (no framework), dark emerald + gold |
 | Hosting    | Vercel (SPA rewrite configured in `vercel.json`)   |
 
-## Visual direction
+## Visual direction — dynamic & 3D
 
-Dark green / emerald background · gold accent · white typography · premium professional look ·
-fully responsive · Framer Motion reveals · reduced-motion support.
+Dark green / emerald base · gold accent · white typography · premium professional look.
+
+Motion & depth layer:
+
+- **WebGL hero backdrop** (three.js, lazy-loaded): emerald/gold particle field + rotating
+  wireframe torus-knot & icosahedron, pointer-parallax camera. Auto-disables without WebGL,
+  pauses off-screen, single static frame under `prefers-reduced-motion`.
+- **3D tilt cards** with moving glare (`Tilt3D`) on service / project / skill / cert cards
+- **Scroll parallax**: hero text and visual move + rotate on scroll (framer-motion)
+- **3D conveyor marquees** (skills strip + testimonial rows) with perspective rotateX
+- **Floating 3D chips** around the profile photo, count-up statistics, rotating headline
+- Framer Motion reveals with rotateX entry; full `prefers-reduced-motion` support
 
 All colours live in `src/styles/global.css` under `:root` — change them once and the whole site
 (including every service page) follows.

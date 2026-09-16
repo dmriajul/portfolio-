@@ -7,6 +7,7 @@ import './styles/global.css'
 import './styles/layout.css'
 import './styles/home.css'
 import './styles/service.css'
+import './styles/threed.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

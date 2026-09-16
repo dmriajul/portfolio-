@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FaArrowRight, FaCircleCheck } from 'react-icons/fa6'
 import Reveal from './Reveal.jsx'
+import Tilt3D from './Tilt3D.jsx'
 
 /**
  * Service card for the home page.
@@ -12,7 +13,8 @@ export default function ServiceCard({ service, index = 0, previewItems = 4 }) {
   const preview = allItems.slice(0, previewItems)
 
   return (
-    <Reveal delay={index * 0.06} y={28}>
+    <Reveal delay={index * 0.06} y={28} rx={7}>
+      <Tilt3D>
       <article className={`service-card${service.accent === 'gold' ? ' gold' : ''}`}>
         <div className="service-icon" aria-hidden="true">
           <Icon />
@@ -41,6 +43,7 @@ export default function ServiceCard({ service, index = 0, previewItems = 4 }) {
           <span className="service-card-count">{allItems.length} capabilities</span>
         </div>
       </article>
+      </Tilt3D>
     </Reveal>
   )
 }

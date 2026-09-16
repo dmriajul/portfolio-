@@ -68,6 +68,7 @@ export default function Testimonials() {
       </div>
 
       <div className="quote-marquee" aria-label="Client testimonials">
+        <div className="quote-tilt">
         <div className="quote-track row-a">
           {[...rowA, ...rowA].map((t, i) => (
             <div className="quote-cell" key={`a-${i}`}>
@@ -75,12 +76,15 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
+        </div>
+        <div className="quote-tilt">
         <div className="quote-track row-b">
           {[...rowB, ...rowB, ...rowB].map((t, i) => (
             <div className="quote-cell" key={`b-${i}`}>
               <QuoteCard t={t} />
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>
