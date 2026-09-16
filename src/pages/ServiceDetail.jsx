@@ -18,6 +18,10 @@ import Reveal from '../components/Reveal.jsx'
 import ProjectCard from '../components/ProjectCard.jsx'
 import Faq from '../components/Faq.jsx'
 import ContactButtons from '../components/ContactButtons.jsx'
+import QuickAnswers from '../components/QuickAnswers.jsx'
+import AuthorBox from '../components/AuthorBox.jsx'
+import JsonLd from '../components/JsonLd.jsx'
+import { serviceGraph } from '../seo/schemas.js'
 import useSeo from '../hooks/useSeo.js'
 import NotFound from './NotFound.jsx'
 import { services, getService } from '../data/services.js'
@@ -54,6 +58,8 @@ export default function ServiceDetail() {
 
   return (
     <article className="service-page">
+      {/* SEO / AEO / GEO structured data for this service page */}
+      <JsonLd data={serviceGraph(service, path)} />
       {/* ---------------- Sub-nav: breadcrumb + service switcher ---------------- */}
       <div className="sd-subnav">
         <div className="container sd-subnav-inner">
@@ -148,6 +154,13 @@ export default function ServiceDetail() {
         </div>
       </header>
 
+      {/* ---------------- Quick answers (AEO) ---------------- */}
+      <section className="section qa-section">
+        <div className="container">
+          <QuickAnswers items={service.quickAnswers} />
+        </div>
+      </section>
+
       {/* ---------------- Intro ---------------- */}
       <section className="section" style={{ paddingTop: 'clamp(30px,4vw,52px)' }}>
         <div className="container">
@@ -168,6 +181,10 @@ export default function ServiceDetail() {
                 ))}
               </div>
             </Reveal>
+          </div>
+
+          <div className="mt-4">
+            <AuthorBox />
           </div>
         </div>
       </section>
@@ -329,8 +346,9 @@ export default function ServiceDetail() {
                 {service.shortName} campaigns with <span className="accent">documented results</span>
               </h2>
               <p className="section-sub">
-                Accounts where this service was delivered — figures taken directly from the
-                platforms.
+                Accounts where this service was delivered. Every figure is taken directly from
+                platform exports — Meta Ads Manager, Google Ads, Google Search Console and GA4 —
+                not estimated.
               </p>
             </div>
 

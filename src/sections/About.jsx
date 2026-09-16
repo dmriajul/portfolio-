@@ -1,6 +1,7 @@
 import { FaAward, FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaGlobe, FaCalendarCheck, FaDownload } from 'react-icons/fa'
 import { FaCircleCheck } from 'react-icons/fa6'
 import Reveal from '../components/Reveal.jsx'
+import CountUp from '../components/CountUp.jsx'
 import { skillBadges } from '../data/skills.js'
 import { aboutStats } from '../data/experience.js'
 import site, { bookingLink, mailtoLink } from '../data/site.js'
@@ -68,8 +69,9 @@ export default function About() {
             <Reveal>
               <div className="about-text">
                 <p>
-                  I am <strong>Khandokar Riajul Islam</strong>, a performance marketing specialist
-                  working with brands in Bangladesh, Europe and the US. My work sits where organic
+                  I am <strong>Khandokar Riajul Islam</strong>, a performance marketing specialist with
+                  {site.yearsExperience} years in digital marketing, working with brands in Bangladesh,
+                  Europe and the US. My work sits where organic
                   and paid meet: <strong>social media strategy and content planning</strong> on one
                   side, <strong>Meta Ads, Google Ads and SEO</strong> on the other, with{' '}
                   <strong>GA4, GTM and reporting</strong> underneath both.
@@ -94,7 +96,9 @@ export default function About() {
               <div className="about-stats">
                 {aboutStats.map((s) => (
                   <div className="about-stat" key={s.label}>
-                    <b>{s.value}</b>
+                    <b>
+                      <CountUp value={s.value} suffix={s.suffix || ''} />
+                    </b>
                     <span>{s.label}</span>
                   </div>
                 ))}

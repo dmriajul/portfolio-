@@ -1,43 +1,87 @@
 /**
- * ⚠️  DRAFT DATA — PLEASE CONFIRM / REPLACE BEFORE DEPLOYING
- * ---------------------------------------------------------
- * I did not have your real certificate list, so these four entries are
- * placeholders that match your profile. Replace `name`, `issuer`, `year`,
- * `url` and `credentialId` with your actual certificates, or delete entries
- * you do not hold. Do not publish credentials you do not own.
- *
- * If `issued` / `year` is unknown, leave it out — the card renders without it.
- * If `url` is empty the card simply won't show a "View credential" link.
+ * Certifications & education — taken from the resume and the public
+ * learning record (Google, Meta, Coursera, HubSpot, SEMrush, Simplilearn).
+ * Provider logos live in /public/certifications/.
  */
-export const certifications = [
+
+export const certProviders = [
   {
-    name: 'Google Ads Search Certification',
-    issuer: 'Google Skillshop',
-    year: '', // TODO: add year
-    url: '', // TODO: add credential URL
-    credentialId: '',
+    id: 'google',
+    name: 'Google',
+    logo: '/certifications/google.png',
+    focus: 'Analytics, advertising & tracking',
+    items: [
+      'Google Analytics 4 (GA4)',
+      'Google Ads',
+      'Google Tag Manager',
+      'Google Analytics Certification',
+    ],
   },
   {
-    name: 'Meta Certified Media Buying Professional',
-    issuer: 'Meta Blueprint',
-    year: '',
-    url: '',
-    credentialId: '',
+    id: 'meta',
+    name: 'Meta',
+    logo: '/certifications/meta.png',
+    focus: 'Meta advertising & social media marketing',
+    items: ['Meta Ads', 'Facebook Marketing', 'Social Media Marketing', 'Meta Marketing Certification'],
   },
   {
-    name: 'Google Analytics 4 (GA4) Certification',
-    issuer: 'Google Skillshop',
-    year: '',
-    url: '',
-    credentialId: '',
+    id: 'coursera',
+    name: 'Coursera',
+    logo: '/certifications/coursera.png',
+    focus: 'Performance marketing fundamentals',
+    items: [
+      'Google Ads for Beginners',
+      'Building a Business Presence with Facebook Marketing',
+      'Social Media Marketing',
+    ],
   },
   {
-    name: 'Content Marketing Certification',
-    issuer: 'HubSpot Academy',
-    year: '',
-    url: '',
-    credentialId: '',
+    id: 'hubspot',
+    name: 'HubSpot',
+    logo: '/certifications/hubspot.png',
+    focus: 'Digital, inbound & content marketing',
+    items: ['Digital Marketing', 'Inbound Marketing', 'Content Marketing'],
+  },
+  {
+    id: 'semrush',
+    name: 'SEMrush',
+    logo: '/certifications/semrush.png',
+    focus: 'SEO, keyword research & content strategy',
+    items: ['SEO', 'Content Marketing', 'Keyword Research'],
+  },
+  {
+    id: 'simplilearn',
+    name: 'Simplilearn',
+    logo: '/certifications/simplilearn.png',
+    focus: 'Facebook advertising & campaign management',
+    items: ['Facebook Marketing & Advertising', 'Campaign Strategy', 'Social Media Advertising'],
   },
 ]
 
-export default certifications
+/** Flat list used for schema.org hasCredential and quick counts. */
+export const certifications = certProviders.flatMap((p) =>
+  p.items.map((item) => ({ name: item, issuer: p.name }))
+)
+
+export const education = [
+  {
+    degree: 'Bachelor of Social Science (B.S.S), Political Science',
+    institute: 'National University, Bangladesh',
+    period: '2019 – 2022',
+    result: '2nd Class',
+  },
+  {
+    degree: 'Higher Secondary Certificate (HSC), Humanities',
+    institute: 'Khan Jahan Ali Ideal College, Khulna',
+    period: '2017 – 2018',
+    result: 'GPA 3.08',
+  },
+  {
+    degree: 'Secondary School Certificate (SSC), Science',
+    institute: 'Shiromoni Secondary School, Khulna',
+    period: '',
+    result: 'GPA 3.17',
+  },
+]
+
+export default certProviders

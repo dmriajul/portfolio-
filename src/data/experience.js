@@ -1,68 +1,93 @@
 /**
- * ⚠️  DRAFT DATA — PLEASE CONFIRM / REPLACE
- * ----------------------------------------
- * Roles and periods below are reconstructed from the client work you confirmed
- * (Foring Group, ZR Fashion, Salient Shop, Rong Bahari, Spreka, DmandFly, Riajul Tech).
- * Please set the correct `period` values and job titles before publishing.
+ * Work experience — mirrors the resume (public/resume/Khandokar_Riajul_Islam_Resume.pdf)
+ * and the published professional history. Metrics are pulled from the
+ * platforms (Meta Ads Manager, Google Search Console, GA4).
  */
 export const experience = [
   {
-    role: 'Performance Marketing Specialist',
-    company: 'Freelance / Contract',
-    location: 'Remote — Bangladesh, EU & US clients',
-    period: '2022 — Present', // TODO: confirm start year
+    role: 'Founder & SEO Content Strategist',
+    company: 'Riajul Tech (riajultech.com)',
+    location: 'Remote — Khulna, Bangladesh',
+    period: 'Jan 2024 – Present',
     current: true,
     summary:
-      'Running social media marketing, Meta Ads, Google Ads, SEO and analytics engagements for e-commerce, fashion, service and tech brands across Bangladesh and Europe.',
+      'Built a US-targeted affiliate-authority publication from scratch and grew it with organic SEO, technical optimization and a full affiliate monetization stack.',
     highlights: [
-      '72+ campaigns managed for Foring Group across Facebook, Instagram and Google — 106,723 impressions at 5.88% CTR and $0.004 CPC',
-      'ZR Fashion: 860+ messaging conversations from 6 product campaigns at $0.05 per result',
-      'Salient Shop: 344 sales in the first 7 days of launch at $0.98 cost per result',
-      'Rong Bahari: 347 conversations at $0.027 per result on a lean budget',
-      'Spreka (EU): 214K reach on €560.53 spend — €1.40 CPM, €0.23 per page visit',
+      '174K impressions and 684 organic clicks within 3 months (Google Search Console), avg. position 8.5 across 1,000+ queries',
+      "Ranks for commercial keywords: 'best travel mouse' (1,824 impressions, 76 clicks), 'travel mouse' (1,824 impressions), 'desk setup 2026' (695 impressions) — no paid traffic",
+      'Manages the full affiliate stack: Amazon Associates (US/UK/CA), Awin, CJ Affiliate and Impact',
+      'Runs Meta Ads and Pinterest Ads targeting US home-office professionals; all performance tracked in GA4',
     ],
-    skills: ['Meta Ads', 'Google Ads', 'Social Media Strategy', 'Creative Testing', 'Reporting'],
+    skills: ['SEO', 'Content Strategy', 'GA4', 'Affiliate Marketing', 'Meta Ads', 'Pinterest Ads'],
   },
   {
-    role: 'Founder & Growth Lead',
-    company: 'Riajul Tech',
-    location: 'riajultech.com',
-    period: '2021 — Present', // TODO: confirm start year
-    current: true,
-    summary:
-      'Built and grew an owned tech content asset as a live SEO and analytics testbed — the same system I implement for clients.',
-    highlights: [
-      '174K organic impressions and 684 organic clicks with an 8.5 average position',
-      '1,000+ queries tracked and iterated through Search Console',
-      'Topic-cluster / silo architecture built around commercial keyword visibility',
-      'GA4, GTM and Looker Studio reporting pipeline implemented end to end',
-    ],
-    skills: ['SEO', 'Content Strategy', 'GA4 & GTM', 'Technical SEO'],
-  },
-  {
-    role: 'Digital Marketing Consultant (Ongoing)',
-    company: 'DmandFly',
+    role: 'Freelance Facebook Ads Consultant',
+    company: 'ZR Fashion · Salient Shop · Rong Bahari · Where House',
     location: 'Remote',
-    period: '2023 — Present', // TODO: confirm dates
-    current: true,
+    period: '2024 – 2025',
+    current: false,
     summary:
-      'Full-funnel engagement combining organic search, social media management and paid media, with every channel decision driven by analytics.',
+      'Managed Facebook Ads for four independent e-commerce and fashion brands on $200–$650 monthly budgets per client, consistently holding cost-per-messaging-conversation between $0.03 and $0.10.',
     highlights: [
-      'SEO and paid keyword data used together to prioritize targets',
-      'Facebook Ads and Google Ads managed as one acquisition system',
-      'Social media presence maintained alongside paid campaigns',
-      'Analytics-based optimization: tracking reviewed before budget is reallocated',
+      'ZR Fashion: 860+ customer messaging conversations across 6 product campaigns at $0.05/result — well below the BD market benchmark',
+      'Salient Shop: 344 wallet sales in the first 7 days of launch; CTR 2.28%, cost per result $0.98',
+      'Rong Bahari: 347 conversations at $0.027/result on a beauty/apparel campaign — lowest CPA across all client accounts',
     ],
-    skills: ['Full-Funnel', 'SEO', 'Meta Ads', 'Google Ads', 'Analytics'],
+    skills: ['Meta Ads', 'Messaging Campaigns', 'Creative Testing', 'Budget Control'],
+  },
+  {
+    role: 'Digital Marketing Specialist',
+    company: 'Foring Group of Companies (Foring Fly · Foring Homes · iTrade Links)',
+    location: 'Motijheel, Dhaka',
+    period: 'Nov 2024 – Dec 2025',
+    current: false,
+    summary:
+      'Owned paid media and social for three brands — travel & tourism, real estate and e-commerce — running Facebook, Google and Instagram campaigns in parallel.',
+    highlights: [
+      '72+ campaigns across Facebook, Google and Instagram with lead costs of $0.13–$0.34 per result',
+      'iTrade Links motorcycle accessory ad: 106,723 impressions at $0.23 CPM, 5.88% CTR and $0.004 CPC on $24.75 spend',
+      'Tracked KPIs in Google Analytics and Meta Insights; coordinated multi-brand social content calendars with creative and sales teams',
+    ],
+    skills: ['Meta Ads', 'Google Ads', 'Multi-brand Strategy', 'Content Calendars', 'Reporting'],
+  },
+  {
+    role: 'Digital Marketing Executive',
+    company: 'DmandFly',
+    location: 'Kamrangirchar, Dhaka',
+    period: 'Aug 2024 – Nov 2024',
+    current: false,
+    summary:
+      'Handled SEO, social media and paid advertising end to end — keyword research, on-page optimization, campaign launch and ROI monitoring.',
+    highlights: [
+      'Improved organic rankings through keyword research and on-page optimization',
+      'Launched and managed Facebook & Google Ads campaigns',
+      'Monitored and optimized campaign ROI with Google Analytics and Facebook Insights',
+    ],
+    skills: ['SEO', 'Social Media', 'Meta Ads', 'Google Ads', 'Analytics'],
+  },
+  {
+    role: 'Lead Generation Specialist',
+    company: 'Lifeboat SEO (Freelance)',
+    location: 'Remote',
+    period: 'Jan 2023 – Jul 2024',
+    current: false,
+    summary:
+      'Sourced and qualified B2B leads for international clients and built the outreach infrastructure around them.',
+    highlights: [
+      'Sourced and qualified B2B leads with LinkedIn Sales Navigator and Apollo.io across multiple industries and regions',
+      'Built automated email sequences in HubSpot and Mailchimp',
+      'Managed CRM segmentation to improve lead handoff and pipeline efficiency',
+    ],
+    skills: ['Lead Generation', 'Apollo.io', 'LinkedIn Sales Navigator', 'HubSpot', 'Mailchimp'],
   },
 ]
 
-/** Small highlight numbers shown in About. */
+/** Headline numbers shown in About / hero bento. */
 export const aboutStats = [
-  { value: '7', label: 'Brands with documented results' },
-  { value: '72+', label: 'Ad campaigns managed' },
-  { value: '174K', label: 'Organic impressions driven' },
-  { value: '$0.027', label: 'Lowest cost per result' },
+  { value: 5, suffix: '+', label: 'Years in digital marketing' },
+  { value: 10, suffix: '+', label: 'Professional certifications' },
+  { value: 7, suffix: '+', label: 'Brands with documented results' },
+  { value: 174, suffix: 'K', label: 'Organic impressions driven' },
 ]
 
 export default experience

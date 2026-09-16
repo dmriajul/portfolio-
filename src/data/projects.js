@@ -6,6 +6,8 @@
 export const projects = [
   {
     slug: 'riajul-tech',
+    image: '/projects/riajultech-search-console.jpg',
+    imageAlt: 'Google Search Console performance report for Riajul Tech showing organic impressions growth',
     name: 'Riajul Tech',
     category: 'Organic Search Growth',
     services: ['seo', 'analytics'],
@@ -27,6 +29,8 @@ export const projects = [
   },
   {
     slug: 'foring-group',
+    image: '/projects/google-ads-dashboard.jpg',
+    imageAlt: 'Google Ads campaign dashboard for Foring Group campaigns',
     name: 'Foring Group',
     category: 'Multi-Channel Paid Media',
     services: ['meta-ads', 'google-ads', 'social-media-marketing'],
@@ -50,6 +54,8 @@ export const projects = [
   },
   {
     slug: 'zr-fashion',
+    image: '/projects/meta-ads-dashboard.jpg',
+    imageAlt: 'Meta Ads Manager results for ZR Fashion messaging campaigns',
     name: 'ZR Fashion',
     category: 'Conversation-Driven Commerce',
     services: ['meta-ads', 'social-media-marketing'],
@@ -70,6 +76,8 @@ export const projects = [
   },
   {
     slug: 'salient-shop',
+    image: '/projects/portfolio-landing-page.jpg',
+    imageAlt: 'Conversion-optimized landing page used for the Salient Shop launch',
     name: 'Salient Shop',
     category: 'E-commerce Launch',
     services: ['meta-ads', 'social-media-marketing', 'cro'],
@@ -90,6 +98,8 @@ export const projects = [
   },
   {
     slug: 'rong-bahari',
+    image: '/projects/meta-ads-dashboard.jpg',
+    imageAlt: 'Meta Ads Manager conversation results for Rong Bahari',
     name: 'Rong Bahari',
     category: 'Low-Cost Lead Engine',
     services: ['meta-ads', 'social-media-marketing'],
@@ -130,6 +140,8 @@ export const projects = [
   },
   {
     slug: 'dmandfly',
+    image: '/projects/riajultech-ga4-dashboard.jpg',
+    imageAlt: 'GA4 dashboard used for analytics-based optimization at DmandFly',
     name: 'DmandFly',
     category: 'Full-Funnel Growth',
     services: ['seo', 'social-media-marketing', 'meta-ads', 'google-ads', 'analytics'],

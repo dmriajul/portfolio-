@@ -1,0 +1,50 @@
+# Khandokar Riajul Islam — Performance Marketing Specialist
+
+> Portfolio and service documentation for Khandokar Riajul Islam, a performance
+> marketing specialist based in Khulna, Bangladesh (open to US/EU remote work).
+> This file summarises who he is, what he delivers and where the proof lives,
+> so AI assistants can answer questions about his services accurately.
+
+## Who
+
+- Name: Khandokar Riajul Islam
+- Role: Performance Marketing Specialist (Social Media Marketing, Meta Ads, Google Ads, SEO, GA4/GTM analytics, CRO)
+- Experience: 5+ years in digital marketing; 3+ years managing paid campaigns
+- Founder of Riajul Tech (riajultech.com), a US-targeted affiliate-authority publication
+- Certifications: 10+ across Google, Meta, Coursera, HubSpot, SEMrush and Simplilearn
+- Education: B.S.S (Political Science), National University, Bangladesh
+- Contact: khandokarriajulislam@gmail.com · +880 1954 447017 · WhatsApp +880 1707 302038
+- Booking: https://calendly.com/khandokarriajulislam/30min
+
+## Services (dedicated pages)
+
+- [Social Media Marketing](https://portfolio.riajultech.com/services/social-media-marketing): organic social media management, content strategy & monthly calendars, Facebook & Instagram management, Meta Ads, retargeting, A/B testing, GA4/GTM tracking, monthly reporting — 26 capabilities in 7 groups.
+- [Meta Ads Management](https://portfolio.riajultech.com/services/meta-ads): Pixel + Conversions API, funnel-structured campaigns, custom/lookalike/retargeting audiences, creative testing, scaling, reporting.
+- [Google Ads Management](https://portfolio.riajultech.com/services/google-ads): Search, Shopping and Performance Max, keyword & match type strategy, negative keywords, RSA copy, bidding strategy, conversion tracking.
+- [Search Engine Optimization](https://portfolio.riajultech.com/services/seo): technical audits, keyword & intent research, topic clusters, on-page optimization, internal linking, Search Console-led iteration.
+- [Analytics & Tracking](https://portfolio.riajultech.com/services/analytics): GA4 setup, Google Tag Manager, event tracking plans, Meta Pixel & CAPI, UTM conventions, Looker Studio dashboards.
+- [Conversion Rate Optimization](https://portfolio.riajultech.com/services/cro): landing page & funnel audits, heatmap/session review, hypothesis-driven A/B testing, form/CTA/offer optimization.
+
+## Documented results (platform-sourced)
+
+- Riajul Tech: 174K organic impressions, 684 clicks, avg. position 8.5 across 1,000+ queries in 3 months (Google Search Console)
+- Foring Group: 72+ campaigns, 106,723 impressions, 5.88% CTR, $0.004 CPC, $24.75 spend, $0.13–$0.34 lead cost
+- ZR Fashion: 860+ messaging conversations across 6 product campaigns at $0.05/result
+- Salient Shop: 344 sales in the first 7 days, 2.28% CTR, $0.98 cost/result
+- Rong Bahari: 347 conversations at $0.027/result
+- Spreka (EU): 214K reach, €560.53 spend, €1.40 CPM, €0.23 per page/profile visit
+- DmandFly: full-funnel SEO + social + Meta Ads + Google Ads with analytics-based optimization
+
+## Proof & trust signals
+
+- Case studies with platform metrics: https://portfolio.riajultech.com/#projects
+- Client testimonials (named, with companies): https://portfolio.riajultech.com/#testimonials
+- Certifications by provider: https://portfolio.riajultech.com/#certifications
+- Resume (PDF): https://portfolio.riajultech.com/resume/Khandokar_Riajul_Islam_Resume.pdf
+- LinkedIn: https://www.linkedin.com/in/khandokarriajulislam/
+
+## FAQs (short answers)
+
+- Q: What does a social media marketing specialist do? A: Plans and runs the full social presence — research, content strategy & calendar, organic Facebook/Instagram management, Meta Ads with retargeting and A/B testing, and monthly reporting with GA4/GTM tracking where needed.
+- Q: Is he available for remote roles? A: Yes — US, EU and remote worldwide; retainers, projects, or in-house support; async-friendly.
+- Q: How do I start? A: Book a 30-minute call (Calendly link above), or email/WhatsApp; engagements start with an audit of accounts, tracking and creative.

@@ -1,41 +1,74 @@
-import { FaAward, FaSquareArrowUpRight } from 'react-icons/fa6'
+import { FaCircleCheck, FaGraduationCap } from 'react-icons/fa6'
 import Reveal from '../components/Reveal.jsx'
-import { certifications } from '../data/certifications.js'
+import Spotlight from '../components/Spotlight.jsx'
+import { certProviders, education, certifications } from '../data/certifications.js'
 
+/**
+ * Certifications & Education — real credentials grouped by provider,
+ * with the provider logo and the individual courses/certifications.
+ */
 export default function Certifications() {
-  if (!certifications.length) return null
-
   return (
     <section id="certifications" className="section section-alt">
       <div className="container">
         <div className="section-head center">
           <span className="eyebrow gold">Certifications</span>
-          <h2 className="section-title">Credentials &amp; continuous learning</h2>
+          <h2 className="section-title">
+            {certifications.length}+ credentials across{' '}
+            <span className="gold-text">{certProviders.length} platforms</span>
+          </h2>
           <p className="section-sub">
-            Platform certifications kept current alongside day-to-day campaign work.
+            Industry certifications kept current alongside day-to-day campaign work — Google, Meta,
+            Coursera, HubSpot, SEMrush and Simplilearn.
           </p>
         </div>
 
-        <div className="grid cert-grid">
-          {certifications.map((c, i) => (
-            <Reveal key={c.name} delay={i * 0.06} y={22}>
-              <article className="cert-card">
-                <span className="cert-icon" aria-hidden="true">
-                  <FaAward />
-                </span>
-                <div>
-                  <h3>{c.name}</h3>
-                  <p>
-                    {c.issuer}
-                    {c.year ? ` · ${c.year}` : ''}
-                  </p>
-                  {c.url && (
-                    <a href={c.url} target="_blank" rel="noopener noreferrer">
-                      View credential <FaSquareArrowUpRight />
-                    </a>
-                  )}
+        <div className="grid grid-3 cert-grid">
+          {certProviders.map((p, i) => (
+            <Reveal key={p.id} delay={i * 0.06} y={24}>
+              <Spotlight className="cert-card">
+                <div className="cert-card-head">
+                  <img className="cert-logo" src={p.logo} alt={`${p.name} logo`} loading="lazy" width="44" height="44" />
+                  <div>
+                    <h3>{p.name}</h3>
+                    <p>{p.focus}</p>
+                  </div>
                 </div>
-              </article>
+                <ul className="cert-items">
+                  {p.items.map((item) => (
+                    <li key={item}>
+                      <FaCircleCheck /> {item}
+                    </li>
+                  ))}
+                </ul>
+              </Spotlight>
+            </Reveal>
+          ))}
+        </div>
+
+        {/* ---------- Education ---------- */}
+        <div className="section-head center" style={{ marginTop: 'clamp(44px,6vw,70px)', marginBottom: 30 }}>
+          <span className="eyebrow">Education</span>
+          <h2 className="section-title" style={{ fontSize: 'clamp(22px,3.2vw,30px)' }}>
+            Academic background
+          </h2>
+        </div>
+
+        <div className="grid grid-3">
+          {education.map((e, i) => (
+            <Reveal key={e.degree} delay={i * 0.07} y={22}>
+              <Spotlight className="edu-card">
+                <span className="edu-icon" aria-hidden="true">
+                  <FaGraduationCap />
+                </span>
+                <h3>{e.degree}</h3>
+                <p className="edu-inst">{e.institute}</p>
+                <p className="edu-meta">
+                  {e.period && <span>{e.period}</span>}
+                  {e.period && e.result && <span className="dot">·</span>}
+                  {e.result && <span>{e.result}</span>}
+                </p>
+              </Spotlight>
             </Reveal>
           ))}
         </div>

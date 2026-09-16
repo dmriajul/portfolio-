@@ -1,34 +1,19 @@
-import { FaBullhorn, FaSearch, FaChartLine, FaPenNib, FaTools } from 'react-icons/fa'
+import { FaBullhorn, FaSearch, FaChartLine, FaPenNib, FaTools, FaEnvelopeOpenText, FaRobot } from 'react-icons/fa'
 
-/** Skill groups shown in the Skills section. */
+/** Skill groups shown in the Skills section (mirrors resume + live portfolio). */
 export const skillGroups = [
   {
-    title: 'Paid Media',
+    title: 'Paid Advertising',
     icon: FaBullhorn,
     skills: [
-      'Meta Ads (Facebook & Instagram)',
-      'Google Ads (Search, Shopping, PMax)',
+      'Facebook & Instagram Ads',
+      'Google Ads (Search, Display, Shopping, PMax, YouTube)',
+      'Pinterest Ads',
+      'Meta Business Manager',
       'Retargeting & Custom Audiences',
       'Lookalike Audiences',
       'Creative & A/B Testing',
-      'Campaign Optimization',
       'Budget & Bid Strategy',
-      'Lead Generation Campaigns',
-      'E-commerce Campaigns',
-    ],
-  },
-  {
-    title: 'Organic & SEO',
-    icon: FaSearch,
-    skills: [
-      'Technical SEO',
-      'Keyword & Intent Research',
-      'Topic Clusters / Silo Architecture',
-      'On-Page Optimization',
-      'Internal Linking',
-      'Local SEO',
-      'Google Search Console',
-      'Content Refresh Strategy',
     ],
   },
   {
@@ -36,14 +21,27 @@ export const skillGroups = [
     icon: FaPenNib,
     skills: [
       'Social Media Strategy',
-      'Content Pillars',
-      'Monthly Content Calendar',
+      'Content Pillars & Monthly Calendar',
       'Instagram Content Strategy',
       'Carousel & Reels Planning',
       'Caption & Copywriting',
       'Hashtag Strategy',
       'Community Engagement',
       'Audience & Competitor Research',
+    ],
+  },
+  {
+    title: 'SEO & Content',
+    icon: FaSearch,
+    skills: [
+      'Technical & On-Page SEO',
+      'Keyword Research & Intent Mapping',
+      'Topic Clusters / Silo Architecture',
+      'Schema Markup (Product / Review / FAQPage)',
+      'Google Search Console',
+      'Rank Math SEO',
+      'Content Optimization & Refresh',
+      'Local SEO',
     ],
   },
   {
@@ -54,24 +52,46 @@ export const skillGroups = [
       'Google Tag Manager (GTM)',
       'Meta Pixel & Conversions API',
       'Event Tracking Plans',
+      'Conversion Tracking',
       'UTM Strategy',
       'Looker Studio Dashboards',
       'Funnel & Drop-off Analysis',
-      'Attribution Review',
     ],
   },
   {
-    title: 'Conversion & Tools',
+    title: 'Conversion Optimization',
     icon: FaTools,
     skills: [
-      'Conversion Rate Optimization',
       'Landing Page Audits',
       'A/B Testing',
       'CTA & Offer Optimization',
-      'Meta Business Suite',
-      'Canva & CapCut',
-      'Notion / Google Sheets',
-      'Screaming Frog / Site Audits',
+      'Form & Funnel Analysis',
+      'Heatmap / Session Review',
+      'Page Speed & UX Review',
+    ],
+  },
+  {
+    title: 'Affiliate & Email',
+    icon: FaEnvelopeOpenText,
+    skills: [
+      'Amazon Associates (US/UK/CA)',
+      'Awin · CJ Affiliate · Impact',
+      'HubSpot & Mailchimp Sequences',
+      'CRM Segmentation',
+      'B2B Lead Generation',
+      'Apollo.io & LinkedIn Sales Navigator',
+    ],
+  },
+  {
+    title: 'AI Marketing & Technical',
+    icon: FaRobot,
+    skills: [
+      'ChatGPT · Gemini · Claude · Perplexity',
+      'Canva AI',
+      'AI-assisted content & campaign workflows',
+      'WordPress · GeneratePress · Elementor',
+      'CSS · Responsive Builds',
+      'ThirstyAffiliates · robots.txt · llms.txt',
     ],
   },
 ]
@@ -87,7 +107,9 @@ export const skillBadges = [
   'Retargeting',
   'A/B Testing',
   'CRO',
-  'Analytics & Reporting',
+  'Pinterest Ads',
+  'Affiliate Marketing',
+  'AI Marketing Tools',
 ]
 
 export default skillGroups

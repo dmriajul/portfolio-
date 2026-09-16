@@ -141,19 +141,24 @@ Any static host works — just point it at `dist/` and add a "rewrite all routes
 
 ---
 
-## ⚠️ Before publishing — please confirm these
+## SEO / AEO / GEO / EEAT
 
-Placeholder content that must be replaced with your real details:
+Built for search engines **and** AI answer engines:
+
+| Layer | What is implemented |
+| --- | --- |
+| **SEO** | Per-page `<title>` / description / canonical / OG / Twitter tags (`useSeo`), semantic heading order, `sitemap.xml`, `robots.txt`, image `alt` + `loading="lazy"` |
+| **AEO** | "Quick answers" box at the top of every service page, home FAQ section, `FAQPage` + `Question/AcceptedAnswer` JSON-LD so answer engines can quote directly |
+| **GEO** | `llms.txt` machine-readable summary, AI crawlers explicitly allowed in `robots.txt` (GPTBot, ClaudeBot, Google-Extended, PerplexityBot, CCBot…), full JSON-LD graph (`Person`, `ProfessionalService`, `Service`, `WebPage`, `BreadcrumbList`) |
+| **EEAT** | Author box on every service page (photo, credentials, "content last reviewed" date, sameAs links), `hasCredential` in schema, platform-sourced metrics with the source named, named client testimonials, education + certification record |
+
+## ⚠️ Remaining before publishing
 
 | Item | File | Status |
 | --- | --- | --- |
-| Certifications | `src/data/certifications.js` | **Draft** — 4 placeholder credentials, replace with real ones |
-| Testimonials | `src/data/testimonials.js` | **Draft quotes** — the `result` metrics are real, the quotes/names are not |
-| Experience periods | `src/data/experience.js` | Roles reconstructed from client work — **check the dates/titles** |
-| Booking link | `src/data/site.js` → `bookingUrl` | Empty → "Book a Call" currently falls back to WhatsApp |
-| Resume PDF | `public/resume/` | Missing → button shows an email fallback instead of 404 |
-| Web3Forms key | `src/data/site.js` → `web3formsKey` | Placeholder → form shows a notice and points to email/WhatsApp |
-| Profile photo | `public/profile.jpg` | Missing → initials card is rendered instead |
+| Web3Forms key | `src/data/site.js` → `web3formsKey` | Still a placeholder — form shows a notice and points to email/WhatsApp |
 
-Everything else (case-study numbers, services, capabilities, contact details) uses the
-confirmed data you provided.
+Everything else is now real data: profile photo (`public/profile.jpg`), resume PDF
+(`public/resume/`), Calendly booking link, certifications by provider, education,
+experience timeline and client testimonials — all taken from your resume and your
+published portfolio (portfolio.riajultech.com).

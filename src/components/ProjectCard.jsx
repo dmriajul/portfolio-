@@ -1,4 +1,4 @@
-import { FaCircleCheck, FaDiagramProject } from 'react-icons/fa6'
+import { FaCircleCheck } from 'react-icons/fa6'
 import Reveal from './Reveal.jsx'
 
 /** Case-study card built on real campaign numbers. */
@@ -6,10 +6,14 @@ export default function ProjectCard({ project, index = 0, showApproach = true })
   return (
     <Reveal delay={index * 0.07} y={30}>
       <article className="project-card">
+        {project.image && (
+          <div className="project-img">
+            <img src={project.image} alt={project.imageAlt || `${project.name} campaign dashboard`} loading="lazy" decoding="async" />
+            <span className="project-img-tag">{project.category}</span>
+          </div>
+        )}
+
         <div className="project-top">
-          <span className="project-cat">
-            <FaDiagramProject /> {project.category}
-          </span>
           <h3>{project.name}</h3>
           <p>{project.summary}</p>
         </div>

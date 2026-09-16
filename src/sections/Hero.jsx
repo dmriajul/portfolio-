@@ -12,13 +12,23 @@ import {
 } from 'react-icons/fa'
 import Avatar from '../components/Avatar.jsx'
 import Reveal from '../components/Reveal.jsx'
-import { site, bookingLink, mailtoLink } from '../data/site.js'
+import CountUp from '../components/CountUp.jsx'
+import RotatingText from '../components/RotatingText.jsx'
+import site, { bookingLink, mailtoLink } from '../data/site.js'
+
+const ROTATING_ROLES = [
+  'Performance Marketing Specialist',
+  'Social Media Marketing Specialist',
+  'Meta Ads & Google Ads Specialist',
+  'SEO & Content Strategist',
+  'GA4 / GTM Analytics Practitioner',
+]
 
 const heroStats = [
-  { value: '174K', label: 'Organic impressions driven' },
-  { value: '$0.027', label: 'Lowest cost per result' },
-  { value: '72+', label: 'Ad campaigns managed' },
-  { value: '344', label: 'Sales in a 7-day launch' },
+  { value: 174, suffix: 'K', label: 'Organic impressions driven', decimals: 0 },
+  { value: 0.027, prefix: '$', label: 'Lowest cost per result', decimals: 3 },
+  { value: 72, suffix: '+', label: 'Ad campaigns managed', decimals: 0 },
+  { value: 344, suffix: '', label: 'Sales in a 7-day launch', decimals: 0 },
 ]
 
 export default function Hero() {
@@ -46,6 +56,11 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero">
+      {/* animated aurora orbs */}
+      <div className="orb orb-1" aria-hidden="true" />
+      <div className="orb orb-2" aria-hidden="true" />
+      <div className="orb orb-3" aria-hidden="true" />
+
       <div className="container">
         <div className="hero-grid">
           {/* ---------------- Left ---------------- */}
@@ -68,7 +83,9 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.06 }}
             >
               <span className="name-line">{site.name}</span>
-              <span className="line-2">{site.role}</span>
+              <span className="line-2">
+                <RotatingText words={ROTATING_ROLES} />
+              </span>
             </motion.h1>
 
             <motion.p
@@ -153,7 +170,14 @@ export default function Hero() {
             <div className="hero-stat-grid">
               {heroStats.map((s) => (
                 <div className="hero-stat" key={s.label}>
-                  <b>{s.value}</b>
+                  <b>
+                    <CountUp
+                      value={s.value}
+                      suffix={s.suffix || ''}
+                      prefix={s.prefix || ''}
+                      decimals={s.decimals || 0}
+                    />
+                  </b>
                   <span>{s.label}</span>
                 </div>
               ))}

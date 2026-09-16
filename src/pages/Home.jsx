@@ -8,7 +8,11 @@ import Services from '../sections/Services.jsx'
 import Experience from '../sections/Experience.jsx'
 import Testimonials from '../sections/Testimonials.jsx'
 import Contact from '../sections/Contact.jsx'
+import HomeFaq from '../sections/HomeFaq.jsx'
+import JsonLd from '../components/JsonLd.jsx'
 import useSeo from '../hooks/useSeo.js'
+import { homeGraph } from '../seo/schemas.js'
+import { homeFaq } from '../data/homeFaq.js'
 
 /**
  * Home page — the single portfolio URL.
@@ -20,6 +24,9 @@ export default function Home() {
 
   return (
     <>
+      {/* SEO / AEO / GEO structured data */}
+      <JsonLd data={homeGraph(homeFaq)} />
+
       <Hero />
       <Strip />
       <About />
@@ -29,6 +36,7 @@ export default function Home() {
       <Services />
       <Experience />
       <Testimonials />
+      <HomeFaq />
       <Contact />
     </>
   )

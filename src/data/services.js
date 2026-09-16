@@ -316,6 +316,13 @@ export const services = [
       'Notion / Google Sheets',
     ],
 
+    quickAnswers: [
+      { q: 'What does a social media marketing specialist do?', a: "Plans and runs a brand's social presence end to end: audience and competitor research, content strategy and a monthly calendar, organic Facebook and Instagram management, Meta Ads campaigns with retargeting and A/B testing, and monthly performance reporting with GA4 / GTM tracking where needed." },
+      { q: 'What is included in this social media marketing service?', a: '26 capabilities across 7 areas: organic social media management, paid social / Meta Ads, strategy and planning, content planning and production direction, audience and competitor research, analytics / tracking / reporting, and CTA and conversion strategy.' },
+      { q: 'What results has Khandokar Riajul Islam delivered in social media marketing?', a: 'Documented results include 860+ messaging conversations at $0.05 per result (ZR Fashion), 347 conversations at $0.027 per result (Rong Bahari), 344 sales in the first 7 days (Salient Shop) and 214K reach at a €1.40 CPM (Spreka).' },
+      { q: 'How much does social media marketing cost?', a: 'Engagements run as a monthly retainer or per project. Paid social testing can start small — lead campaigns here have produced conversations at $0.03–$0.10 each. Book a call for a scoped quote.' },
+    ],
+
     faqs: [
       {
         q: 'Do you handle both organic and paid social media?',
@@ -483,6 +490,13 @@ export const services = [
 
     tools: ['Meta Ads Manager', 'Meta Pixel & CAPI', 'Google Tag Manager', 'GA4', 'Looker Studio', 'Canva', 'CapCut', 'Google Sheets'],
 
+    quickAnswers: [
+      { q: 'What does a Meta Ads specialist do?', a: 'Sets up tracking (Meta Pixel + Conversions API), structures campaigns by funnel stage, builds custom, lookalike and retargeting audiences, tests creative systematically, optimizes daily toward an agreed cost per result, and reports monthly.' },
+      { q: 'What Meta Ads results has Khandokar Riajul Islam delivered?', a: '$0.05 per result across 860+ conversations (ZR Fashion), $0.027 per result (Rong Bahari), 214K reach at €1.40 CPM on €560.53 spend (Spreka), and 72+ campaigns at $0.004 CPC with leads at $0.13–$0.34 (Foring Group).' },
+      { q: 'What budget is needed to start Meta Ads?', a: 'Messaging and lead campaigns can be tested on very small budgets — $24.75 of spend produced leads at $0.13–$0.34. Purchase campaigns need enough budget to exit the learning phase, which is calculated before launch.' },
+      { q: 'How fast do Meta Ads show results?', a: 'Conversations or leads often appear within the first week; reliable creative-testing conclusions within two to three weeks of structured testing.' },
+    ],
+
     faqs: [
       {
         q: 'What budget do I need to start?',
@@ -636,6 +650,13 @@ export const services = [
     ],
 
     tools: ['Google Ads', 'Google Merchant Center', 'Google Tag Manager', 'GA4', 'Google Search Console', 'Keyword Planner', 'Looker Studio', 'Google Sheets'],
+
+    quickAnswers: [
+      { q: 'What does a Google Ads specialist do?', a: 'Verifies conversion tracking, researches keywords and intent, builds tightly themed ad groups with controlled match types and negative lists, writes Responsive Search Ads, selects bidding strategy, mines search terms weekly and reports monthly.' },
+      { q: 'What Google Ads results has Khandokar Riajul Islam delivered?', a: 'For Foring Group: 106,723 impressions, 5.88% CTR and $0.004 CPC on $24.75 spend, with lead costs held at $0.13–$0.34 per result across 72+ campaigns.' },
+      { q: 'Should I start with Google Ads or Meta Ads?', a: 'Google Ads captures existing demand and usually produces the fastest qualified leads for products people already search for. Meta Ads creates demand. Brands with both signals — like Foring Group and DmandFly — run them together.' },
+      { q: 'Do you manage Performance Max campaigns?', a: 'Yes — with segmented asset groups, product feed quality work, brand / non-brand control and verified tracking before any scale-up.' },
+    ],
 
     faqs: [
       {
@@ -799,6 +820,13 @@ export const services = [
 
     tools: ['Google Search Console', 'GA4', 'Google Keyword Planner', 'Ahrefs / Semrush', 'Screaming Frog', 'PageSpeed Insights', 'Looker Studio', 'Google Sheets'],
 
+    quickAnswers: [
+      { q: 'What does an SEO specialist do?', a: 'Audits technical foundations (crawl, index, speed, Core Web Vitals, schema), maps keywords and intent into topic clusters, optimizes on-page elements and internal links, plans content, then iterates from Google Search Console data with monthly reporting.' },
+      { q: 'What SEO results has Khandokar Riajul Islam delivered?', a: "Riajul Tech reached 174K impressions and 684 organic clicks within 3 months at an 8.5 average position across 1,000+ tracked queries, ranking for commercial keywords such as 'best travel mouse' — without paid traffic." },
+      { q: 'How long does SEO take to show results?', a: 'Technical and on-page fixes can move rankings within weeks. New content typically needs 3–6 months to reach meaningful positions; competitive commercial queries take longer.' },
+      { q: 'Do you guarantee first-page rankings?', a: 'No honest specialist can guarantee rankings. The commitment is completed audits, implemented optimizations, brief-led content and transparent monthly Search Console reporting.' },
+    ],
+
     faqs: [
       {
         q: 'How long does SEO take?',
@@ -944,6 +972,12 @@ export const services = [
 
     tools: ['GA4', 'Google Tag Manager', 'Looker Studio', 'Meta Events Manager', 'Google Search Console', 'Google Ads', 'Tag Assistant / DebugView', 'Google Sheets'],
 
+    quickAnswers: [
+      { q: 'What does marketing analytics setup include?', a: 'A GA4 property with an event tracking plan, Google Tag Manager tags and data layer, Meta Pixel and Conversions API, Google Ads conversion linking, a UTM naming convention, Looker Studio dashboards and monthly cross-channel reporting.' },
+      { q: 'Why do ad platforms and GA4 report different numbers?', a: 'They measure differently: ad platforms use longer attribution windows, cross-device modelling and view-through credit, while GA4 records directly observed events. Both are configured correctly, with a documented rule for which number drives which decision.' },
+      { q: 'Do small budgets still need tracking?', a: 'Especially small budgets. The difference between $0.05 and $0.50 per result is only visible with correct tracking — untracked spend is uncontrolled spend.' },
+    ],
+
     faqs: [
       {
         q: 'Why does my ad platform report more conversions than GA4?',
@@ -1084,6 +1118,13 @@ export const services = [
     ],
 
     tools: ['GA4', 'Google Tag Manager', 'Meta Ads Manager', 'Hotjar / Microsoft Clarity', 'Looker Studio', 'Figma', 'Google Optimize alternatives (A/B platforms)', 'Google Sheets'],
+
+    quickAnswers: [
+      { q: 'What is conversion rate optimization (CRO)?', a: 'Evidence-led improvement of what happens after the click: landing page and funnel audits, heatmap and session review, hypothesis-driven A/B testing, and form, CTA and offer fixes — measured on conversion rate and revenue per visitor.' },
+      { q: 'What CRO results has Khandokar Riajul Islam delivered?', a: 'Salient Shop produced 344 sales in its first 7 days after same-week changes to the offer, landing page and creative — at a 2.28% CTR and $0.98 cost per result.' },
+      { q: 'How much traffic is needed for A/B testing?', a: 'Roughly a few hundred conversions per month per variant for a reliable test. Below that, high-confidence changes are shipped from audit and session-recording evidence instead.' },
+      { q: 'Should I increase ad budget or fix conversion first?', a: 'Fix conversion first. Doubling budget on a page that converts at 1% doubles the waste; raise the rate, then scale spend into a page that can absorb it.' },
+    ],
 
     faqs: [
       {

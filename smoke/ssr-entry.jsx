@@ -61,6 +61,12 @@ const homeChecks = [
   ['Book a Call', 'Book a Call'],
   ['Web3Forms note or form', 'Send Message'],
   ['footer Social Media heading', 'Social Media'],
+  ['education section', 'Academic background'],
+  ['certification provider Google', '>Google<'],
+  ['certification provider Simplilearn', 'Simplilearn'],
+  ['home FAQ', 'Who is Khandokar Riajul Islam?'],
+  ['calendly booking link', 'calendly.com/khandokarriajulislam/30min'],
+  ['person JSON-LD', 'application/ld+json'],
   ['footer quick links', 'Quick Links'],
 ]
 console.log('\nHome page:')
@@ -105,6 +111,12 @@ for (const s of services) {
   if (!html.includes('Relevant Work') && projects.some((p) => p.services.includes(s.slug)))
     fail(`${s.slug}: expected related case studies`)
   if (!html.includes('Other services')) fail(`${s.slug}: missing cross-links to other services`)
+  if (!html.includes('Quick answers')) fail(`${s.slug}: missing AEO quick-answers box`)
+  if (!html.includes('Written & delivered by')) fail(`${s.slug}: missing EEAT author box`)
+  if (!html.includes('application/ld+json')) fail(`${s.slug}: missing JSON-LD structured data`)
+  for (const qa of s.quickAnswers || []) {
+    if (!html.includes(qa.q)) fail(`${s.slug}: missing quick answer "${qa.q}"`)
+  }
 
   const related = projects.filter((p) => p.services.includes(s.slug)).length
   console.log(

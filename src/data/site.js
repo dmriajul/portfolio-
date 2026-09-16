@@ -9,34 +9,37 @@ export const site = {
   role: 'Performance Marketing Specialist',
   roleAlt: 'Social Media Marketing Specialist',
   location: 'Khulna, Bangladesh',
-  availability: 'Available for Remote Projects',
+  availability: 'Available for Remote Projects (US / EU / BD)',
   brand: 'Riajul',
   brandSuffix: '.Marketing',
+
+  /** Headline claims — kept in one place so every section stays consistent. */
+  yearsExperience: '5+',
+  yearsManaging: '3+',
+  certificationCount: '10+',
 
   email: 'khandokarriajulislam@gmail.com',
   phone: '+8801954447017',
   phoneDisplay: '+880 1954 447017',
   whatsapp: '8801707302038',
+  whatsappDisplay: '+880 1707 302038',
   website: 'https://riajultech.com',
   websiteDisplay: 'riajultech.com',
   portfolioUrl: 'https://portfolio.riajultech.com',
 
-  /**
-   * TODO: paste your real Calendly / Cal.com / Google Calendar booking link here.
-   * While it is empty, every "Book a Call" button automatically falls back to a
-   * pre-filled WhatsApp message, so no button on the site can ever be broken.
-   */
-  bookingUrl: '',
+  /** Real booking link (Calendly). */
+  bookingUrl: 'https://calendly.com/khandokarriajulislam/30min',
 
-  /**
-   * TODO: upload your resume PDF to /public/resume/Khandokar-Riajul-Islam-Resume.pdf
-   * The Resume button HEAD-checks this path first: if the file is missing it shows a
-   * friendly "request by email" notice instead of a 404 page.
-   */
-  resumeUrl: '/resume/Khandokar-Riajul-Islam-Resume.pdf',
+  /** Resume PDF lives in /public/resume and is HEAD-checked before download. */
+  resumeUrl: '/resume/Khandokar_Riajul_Islam_Resume.pdf',
+
+  profileImage: '/profile.jpg',
 
   /** Web3Forms access key for the Contact section form. TODO: replace with your real key. */
   web3formsKey: 'YOUR_ACCESS_KEY_HERE',
+
+  /** Date shown as "last reviewed" for EEAT freshness signals. */
+  contentUpdated: '2026-09-16',
 
   socials: [
     { id: 'linkedin', label: 'LinkedIn', url: 'https://www.linkedin.com/in/khandokarriajulislam/' },
